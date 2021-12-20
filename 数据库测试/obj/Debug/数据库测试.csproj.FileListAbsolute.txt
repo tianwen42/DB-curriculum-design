@@ -1,0 +1,10 @@
+C:\Users\Administrator\source\repos\数据库测试\bin\Debug\数据库测试.exe.config
+C:\Users\Administrator\source\repos\数据库测试\bin\Debug\数据库测试.exe
+C:\Users\Administrator\source\repos\数据库测试\bin\Debug\数据库测试.pdb
+C:\Users\Administrator\source\repos\数据库测试\obj\Debug\数据库测试.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\数据库测试\obj\Debug\数据库测试.Form1.resources
+C:\Users\Administrator\source\repos\数据库测试\obj\Debug\数据库测试.Properties.Resources.resources
+C:\Users\Administrator\source\repos\数据库测试\obj\Debug\数据库测试.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\数据库测试\obj\Debug\数据库测试.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\数据库测试\obj\Debug\数据库测试.exe
+C:\Users\Administrator\source\repos\数据库测试\obj\Debug\数据库测试.pdb
