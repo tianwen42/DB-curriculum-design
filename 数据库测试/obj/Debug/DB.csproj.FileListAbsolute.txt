@@ -1,0 +1,11 @@
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\bin\Debug\数据库测试.exe.config
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\bin\Debug\数据库测试.exe
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\bin\Debug\数据库测试.pdb
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\obj\Debug\DB.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\obj\Debug\数据库测试.loginDsigner.resources
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\obj\Debug\数据库测试.main.resources
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\obj\Debug\数据库测试.Properties.Resources.resources
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\obj\Debug\DB.csproj.GenerateResource.cache
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\obj\Debug\DB.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\obj\Debug\数据库测试.exe
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\obj\Debug\数据库测试.pdb

@@ -39,7 +39,7 @@ namespace 数据库测试
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 247);
+            this.button1.Location = new System.Drawing.Point(186, 229);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 32);
             this.button1.TabIndex = 0;
@@ -49,12 +49,13 @@ namespace 数据库测试
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(318, 245);
+            this.button2.Location = new System.Drawing.Point(327, 229);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 36);
             this.button2.TabIndex = 1;
             this.button2.Text = "button2";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -92,19 +93,20 @@ namespace 数据库测试
             this.textBox1.Size = new System.Drawing.Size(239, 25);
             this.textBox1.TabIndex = 5;
             // 
-            // Form1
+            // loginDsigner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 333);
+            this.ClientSize = new System.Drawing.Size(1054, 595);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.account);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "loginDsigner";
             this.Text = "冰球比赛管理系统";
+            this.Load += new System.EventHandler(this.loginDsigner_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
