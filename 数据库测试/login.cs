@@ -16,7 +16,7 @@ namespace 数据库测试
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new loginDsigner());
+            Application.Run(new main());
         }
     }
 }

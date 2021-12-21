@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="competitionDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>competitionDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbHelperSQL.cs" />
     <Compile Include="loginDsigner.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="competitionDataSet.xsc">
+      <DependentUpon>competitionDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="competitionDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>competitionDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="competitionDataSet.xss">
+      <DependentUpon>competitionDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

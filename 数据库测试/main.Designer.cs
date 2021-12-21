@@ -29,39 +29,37 @@ namespace 数据库测试
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.readerCondition = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.dept = new System.Windows.Forms.TextBox();
-            this.rBorrowedNum = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.rCurNum = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.sex = new System.Windows.Forms.ComboBox();
-            this.readerSearch = new System.Windows.Forms.Button();
-            this.phone = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.job = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rname = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.borrowid = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.readerSearchResult = new System.Windows.Forms.DataGridView();
             this.editReader = new System.Windows.Forms.Button();
             this.deleteReader = new System.Windows.Forms.Button();
             this.addReader = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.teamAdmin = new System.Windows.Forms.DataGridView();
+            this.readerCondition = new System.Windows.Forms.GroupBox();
+            this.readerSearch = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.球队TableAdapter = new 数据库测试.competitionDataSetTableAdapters.球队TableAdapter();
+            this.competitionDataSet1 = new 数据库测试.competitionDataSet();
+            this.球队BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.球队名称DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.所属单位DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.主教练DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.球队人数DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.负责人DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.联系方式DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.备注DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.readerCondition.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.readerSearchResult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamAdmin)).BeginInit();
+            this.readerCondition.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.competitionDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.球队BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -91,250 +89,9 @@ namespace 数据库测试
             this.tabPage1.Text = "球队管理";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(995, 541);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "球员管理";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(995, 541);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "比赛安排";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(995, 541);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "积分排名";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // readerCondition
-            // 
-            this.readerCondition.Controls.Add(this.label10);
-            this.readerCondition.Controls.Add(this.dept);
-            this.readerCondition.Controls.Add(this.rBorrowedNum);
-            this.readerCondition.Controls.Add(this.label11);
-            this.readerCondition.Controls.Add(this.rCurNum);
-            this.readerCondition.Controls.Add(this.label12);
-            this.readerCondition.Controls.Add(this.sex);
-            this.readerCondition.Controls.Add(this.readerSearch);
-            this.readerCondition.Controls.Add(this.phone);
-            this.readerCondition.Controls.Add(this.label5);
-            this.readerCondition.Controls.Add(this.job);
-            this.readerCondition.Controls.Add(this.label4);
-            this.readerCondition.Controls.Add(this.label3);
-            this.readerCondition.Controls.Add(this.rname);
-            this.readerCondition.Controls.Add(this.label2);
-            this.readerCondition.Controls.Add(this.borrowid);
-            this.readerCondition.Controls.Add(this.label1);
-            this.readerCondition.Location = new System.Drawing.Point(13, 7);
-            this.readerCondition.Margin = new System.Windows.Forms.Padding(4);
-            this.readerCondition.Name = "readerCondition";
-            this.readerCondition.Padding = new System.Windows.Forms.Padding(4);
-            this.readerCondition.Size = new System.Drawing.Size(910, 220);
-            this.readerCondition.TabIndex = 1;
-            this.readerCondition.TabStop = false;
-            this.readerCondition.Text = "查询条件";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(597, 128);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 15);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "工作部门";
-            // 
-            // dept
-            // 
-            this.dept.Location = new System.Drawing.Point(672, 122);
-            this.dept.Margin = new System.Windows.Forms.Padding(4);
-            this.dept.Name = "dept";
-            this.dept.Size = new System.Drawing.Size(132, 25);
-            this.dept.TabIndex = 23;
-            // 
-            // rBorrowedNum
-            // 
-            this.rBorrowedNum.Location = new System.Drawing.Point(400, 34);
-            this.rBorrowedNum.Margin = new System.Windows.Forms.Padding(4);
-            this.rBorrowedNum.Name = "rBorrowedNum";
-            this.rBorrowedNum.Size = new System.Drawing.Size(132, 25);
-            this.rBorrowedNum.TabIndex = 22;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(299, 37);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 15);
-            this.label11.TabIndex = 21;
-            this.label11.Text = "最少已借数量";
-            // 
-            // rCurNum
-            // 
-            this.rCurNum.Location = new System.Drawing.Point(113, 72);
-            this.rCurNum.Margin = new System.Windows.Forms.Padding(4);
-            this.rCurNum.Name = "rCurNum";
-            this.rCurNum.Size = new System.Drawing.Size(132, 25);
-            this.rCurNum.TabIndex = 20;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(8, 75);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 15);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "最少可借数量";
-            // 
-            // sex
-            // 
-            this.sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sex.FormattingEnabled = true;
-            this.sex.Items.AddRange(new object[] {
-            "男",
-            "女"});
-            this.sex.Location = new System.Drawing.Point(400, 78);
-            this.sex.Margin = new System.Windows.Forms.Padding(4);
-            this.sex.Name = "sex";
-            this.sex.Size = new System.Drawing.Size(132, 23);
-            this.sex.TabIndex = 18;
-            // 
-            // readerSearch
-            // 
-            this.readerSearch.Location = new System.Drawing.Point(347, 167);
-            this.readerSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.readerSearch.Name = "readerSearch";
-            this.readerSearch.Size = new System.Drawing.Size(158, 31);
-            this.readerSearch.TabIndex = 16;
-            this.readerSearch.Text = "查询";
-            this.readerSearch.UseVisualStyleBackColor = true;
-            // 
-            // phone
-            // 
-            this.phone.Location = new System.Drawing.Point(672, 79);
-            this.phone.Margin = new System.Windows.Forms.Padding(4);
-            this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(132, 25);
-            this.phone.TabIndex = 15;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(597, 82);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(67, 15);
-            this.label5.TabIndex = 14;
-            this.label5.Text = "联系电话";
-            // 
-            // job
-            // 
-            this.job.Location = new System.Drawing.Point(672, 34);
-            this.job.Margin = new System.Windows.Forms.Padding(4);
-            this.job.Name = "job";
-            this.job.Size = new System.Drawing.Size(132, 25);
-            this.job.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(627, 40);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "职称";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(355, 81);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "性别";
-            // 
-            // rname
-            // 
-            this.rname.Location = new System.Drawing.Point(113, 118);
-            this.rname.Margin = new System.Windows.Forms.Padding(4);
-            this.rname.Name = "rname";
-            this.rname.Size = new System.Drawing.Size(132, 25);
-            this.rname.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 122);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "姓名";
-            // 
-            // borrowid
-            // 
-            this.borrowid.Location = new System.Drawing.Point(113, 30);
-            this.borrowid.Margin = new System.Windows.Forms.Padding(4);
-            this.borrowid.Name = "borrowid";
-            this.borrowid.Size = new System.Drawing.Size(132, 25);
-            this.borrowid.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "借书证号";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.readerSearchResult);
-            this.groupBox2.Location = new System.Drawing.Point(10, 235);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(906, 284);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "查询结果";
-            // 
-            // readerSearchResult
-            // 
-            this.readerSearchResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.readerSearchResult.Location = new System.Drawing.Point(3, 18);
-            this.readerSearchResult.Margin = new System.Windows.Forms.Padding(4);
-            this.readerSearchResult.Name = "readerSearchResult";
-            this.readerSearchResult.RowHeadersWidth = 51;
-            this.readerSearchResult.RowTemplate.Height = 23;
-            this.readerSearchResult.Size = new System.Drawing.Size(895, 258);
-            this.readerSearchResult.TabIndex = 0;
-            // 
             // editReader
             // 
-            this.editReader.Location = new System.Drawing.Point(808, 527);
+            this.editReader.Location = new System.Drawing.Point(808, 499);
             this.editReader.Margin = new System.Windows.Forms.Padding(4);
             this.editReader.Name = "editReader";
             this.editReader.Size = new System.Drawing.Size(100, 29);
@@ -344,7 +101,7 @@ namespace 数据库测试
             // 
             // deleteReader
             // 
-            this.deleteReader.Location = new System.Drawing.Point(391, 527);
+            this.deleteReader.Location = new System.Drawing.Point(391, 499);
             this.deleteReader.Margin = new System.Windows.Forms.Padding(4);
             this.deleteReader.Name = "deleteReader";
             this.deleteReader.Size = new System.Drawing.Size(100, 29);
@@ -354,7 +111,7 @@ namespace 数据库测试
             // 
             // addReader
             // 
-            this.addReader.Location = new System.Drawing.Point(13, 527);
+            this.addReader.Location = new System.Drawing.Point(17, 499);
             this.addReader.Margin = new System.Windows.Forms.Padding(4);
             this.addReader.Name = "addReader";
             this.addReader.Size = new System.Drawing.Size(100, 29);
@@ -362,20 +119,189 @@ namespace 数据库测试
             this.addReader.Text = "新增";
             this.addReader.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.teamAdmin);
+            this.groupBox2.Location = new System.Drawing.Point(10, 90);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(907, 370);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "查询结果";
+            // 
+            // teamAdmin
+            // 
+            this.teamAdmin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.teamAdmin.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.球队名称DataGridViewTextBoxColumn,
+            this.所属单位DataGridViewTextBoxColumn,
+            this.主教练DataGridViewTextBoxColumn,
+            this.球队人数DataGridViewTextBoxColumn,
+            this.负责人DataGridViewTextBoxColumn,
+            this.联系方式DataGridViewTextBoxColumn,
+            this.备注DataGridViewTextBoxColumn});
+            this.teamAdmin.Location = new System.Drawing.Point(7, 25);
+            this.teamAdmin.Name = "teamAdmin";
+            this.teamAdmin.RowHeadersWidth = 51;
+            this.teamAdmin.RowTemplate.Height = 27;
+            this.teamAdmin.Size = new System.Drawing.Size(891, 332);
+            this.teamAdmin.TabIndex = 0;
+            this.teamAdmin.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // readerCondition
+            // 
+            this.readerCondition.Controls.Add(this.readerSearch);
+            this.readerCondition.Location = new System.Drawing.Point(13, 7);
+            this.readerCondition.Margin = new System.Windows.Forms.Padding(4);
+            this.readerCondition.Name = "readerCondition";
+            this.readerCondition.Padding = new System.Windows.Forms.Padding(4);
+            this.readerCondition.Size = new System.Drawing.Size(903, 75);
+            this.readerCondition.TabIndex = 1;
+            this.readerCondition.TabStop = false;
+            this.readerCondition.Text = "查询条件";
+            // 
+            // readerSearch
+            // 
+            this.readerSearch.Location = new System.Drawing.Point(363, 26);
+            this.readerSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.readerSearch.Name = "readerSearch";
+            this.readerSearch.Size = new System.Drawing.Size(158, 31);
+            this.readerSearch.TabIndex = 16;
+            this.readerSearch.Text = "查询";
+            this.readerSearch.UseVisualStyleBackColor = true;
+            this.readerSearch.Click += new System.EventHandler(this.readerSearch_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(924, 565);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "球员管理";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(924, 565);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "比赛安排";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 25);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(924, 565);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "积分排名";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // 球队TableAdapter
+            // 
+            this.球队TableAdapter.ClearBeforeFill = true;
+            // 
+            // competitionDataSet1
+            // 
+            this.competitionDataSet1.DataSetName = "competitionDataSet";
+            this.competitionDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // 球队BindingSource
+            // 
+            this.球队BindingSource.DataMember = "球队";
+            this.球队BindingSource.DataSource = this.competitionDataSet1;
+            // 
+            // 球队名称DataGridViewTextBoxColumn
+            // 
+            this.球队名称DataGridViewTextBoxColumn.DataPropertyName = "球队名称";
+            this.球队名称DataGridViewTextBoxColumn.HeaderText = "球队名称";
+            this.球队名称DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.球队名称DataGridViewTextBoxColumn.Name = "球队名称DataGridViewTextBoxColumn";
+            this.球队名称DataGridViewTextBoxColumn.ReadOnly = true;
+            this.球队名称DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.球队名称DataGridViewTextBoxColumn.Width = 110;
+            // 
+            // 所属单位DataGridViewTextBoxColumn
+            // 
+            this.所属单位DataGridViewTextBoxColumn.DataPropertyName = "所属单位";
+            this.所属单位DataGridViewTextBoxColumn.HeaderText = "所属单位";
+            this.所属单位DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.所属单位DataGridViewTextBoxColumn.Name = "所属单位DataGridViewTextBoxColumn";
+            this.所属单位DataGridViewTextBoxColumn.ReadOnly = true;
+            this.所属单位DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.所属单位DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // 主教练DataGridViewTextBoxColumn
+            // 
+            this.主教练DataGridViewTextBoxColumn.DataPropertyName = "主教练";
+            this.主教练DataGridViewTextBoxColumn.HeaderText = "主教练";
+            this.主教练DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.主教练DataGridViewTextBoxColumn.Name = "主教练DataGridViewTextBoxColumn";
+            this.主教练DataGridViewTextBoxColumn.ReadOnly = true;
+            this.主教练DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // 球队人数DataGridViewTextBoxColumn
+            // 
+            this.球队人数DataGridViewTextBoxColumn.DataPropertyName = "球队人数";
+            this.球队人数DataGridViewTextBoxColumn.HeaderText = "球队人数";
+            this.球队人数DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.球队人数DataGridViewTextBoxColumn.Name = "球队人数DataGridViewTextBoxColumn";
+            this.球队人数DataGridViewTextBoxColumn.ReadOnly = true;
+            this.球队人数DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // 负责人DataGridViewTextBoxColumn
+            // 
+            this.负责人DataGridViewTextBoxColumn.DataPropertyName = "负责人";
+            this.负责人DataGridViewTextBoxColumn.HeaderText = "负责人";
+            this.负责人DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.负责人DataGridViewTextBoxColumn.Name = "负责人DataGridViewTextBoxColumn";
+            this.负责人DataGridViewTextBoxColumn.ReadOnly = true;
+            this.负责人DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.负责人DataGridViewTextBoxColumn.Width = 125;
+            // 
+            // 联系方式DataGridViewTextBoxColumn
+            // 
+            this.联系方式DataGridViewTextBoxColumn.DataPropertyName = "联系方式";
+            this.联系方式DataGridViewTextBoxColumn.HeaderText = "联系方式";
+            this.联系方式DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.联系方式DataGridViewTextBoxColumn.Name = "联系方式DataGridViewTextBoxColumn";
+            this.联系方式DataGridViewTextBoxColumn.ReadOnly = true;
+            this.联系方式DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.联系方式DataGridViewTextBoxColumn.Width = 150;
+            // 
+            // 备注DataGridViewTextBoxColumn
+            // 
+            this.备注DataGridViewTextBoxColumn.DataPropertyName = "备注";
+            this.备注DataGridViewTextBoxColumn.HeaderText = "备注";
+            this.备注DataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.备注DataGridViewTextBoxColumn.Name = "备注DataGridViewTextBoxColumn";
+            this.备注DataGridViewTextBoxColumn.ReadOnly = true;
+            this.备注DataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.备注DataGridViewTextBoxColumn.Width = 125;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(932, 594);
+            this.ClientSize = new System.Drawing.Size(931, 563);
             this.Controls.Add(this.tabControl1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "main";
-            this.Text = "main";
+            this.Text = "冰球比赛管理系统";
+            this.Load += new System.EventHandler(this.main_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.readerCondition.ResumeLayout(false);
-            this.readerCondition.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.readerSearchResult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teamAdmin)).EndInit();
+            this.readerCondition.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.competitionDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.球队BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -388,27 +314,21 @@ namespace 数据库测试
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox readerCondition;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox dept;
-        private System.Windows.Forms.TextBox rBorrowedNum;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox rCurNum;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox sex;
         private System.Windows.Forms.Button readerSearch;
-        private System.Windows.Forms.TextBox phone;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox job;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox rname;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox borrowid;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button editReader;
         private System.Windows.Forms.Button deleteReader;
         private System.Windows.Forms.Button addReader;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView readerSearchResult;
+        private System.Windows.Forms.DataGridView teamAdmin;
+        private competitionDataSetTableAdapters.球队TableAdapter 球队TableAdapter;
+        private competitionDataSet competitionDataSet1;
+        private System.Windows.Forms.BindingSource 球队BindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 球队名称DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 所属单位DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 主教练DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 球队人数DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 负责人DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 联系方式DataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 备注DataGridViewTextBoxColumn;
     }
 }

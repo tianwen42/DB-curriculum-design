@@ -29,7 +29,7 @@ namespace 数据库测试
                     conn.ConnectionString = connsql;
                     conn.Open(); // 打开数据库连接
 
-                    String sql = "select * from student"; // 查询语句
+                    String sql = "select * from S"; // 查询语句
 
                     SqlDataAdapter myda = new SqlDataAdapter(sql, conn); // 实例化适配器
 
@@ -44,14 +44,14 @@ namespace 数据库测试
                     return;
             }
 
-            //if (MessageBox.Show("登录成功！", "提示") == DialogResult.OK)
-            //{
+            if (MessageBox.Show("登录成功！", "提示") == DialogResult.OK)
+            {
 
-            //    //验证成功进入系统
-            //    main mainForm = new main();
-            //    mainForm.Show(this);
-            //    this.Hide();
-            //}
+                //验证成功进入系统
+                main mainForm = new main();
+                mainForm.Show(this);
+                this.Hide();
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -71,18 +71,18 @@ namespace 数据库测试
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // 从指定数据库中查找所有表名
-            string sqlTableName = "Select * From Information_Schema.Tables";
-            StringBuilder tableNames = new StringBuilder();
-            using (SqlDataReader dr = SqlHelper.ExecuteReaderByText(sqlTableName, null))
-            {
-                while (dr.Read())
-                {
-                    // 表名
-                    tableNames.Append(dr["Table_Name"] + ",");
-                }
-            }
-            MessageBox.Show("数据库中所有表名：" + tableNames.ToString(), "小赖温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //// 从指定数据库中查找所有表名
+            //string sqlTableName = "Select * From Information_Schema.Tables";
+            //StringBuilder tableNames = new StringBuilder();
+            //using (SqlDataReader dr = SqlHelper.ExecuteReaderByText(sqlTableName, null))
+            //{
+            //    while (dr.Read())
+            //    {
+            //        // 表名
+            //        tableNames.Append(dr["Table_Name"] + ",");
+            //    }
+            //}
+            //MessageBox.Show("数据库中所有表名：" + tableNames.ToString(), "小赖温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

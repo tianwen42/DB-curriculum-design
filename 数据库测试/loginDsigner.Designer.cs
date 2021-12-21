@@ -39,7 +39,7 @@ namespace 数据库测试
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 229);
+            this.button1.Location = new System.Drawing.Point(177, 191);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 32);
             this.button1.TabIndex = 0;
@@ -49,7 +49,7 @@ namespace 数据库测试
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(327, 229);
+            this.button2.Location = new System.Drawing.Point(318, 191);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(77, 36);
             this.button2.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace 数据库测试
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 121);
+            this.label1.Location = new System.Drawing.Point(118, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 15);
             this.label1.TabIndex = 2;
@@ -70,7 +70,7 @@ namespace 数据库测试
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(127, 169);
+            this.label2.Location = new System.Drawing.Point(118, 131);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(52, 15);
             this.label2.TabIndex = 3;
@@ -79,7 +79,7 @@ namespace 数据库测试
             // 
             // account
             // 
-            this.account.Location = new System.Drawing.Point(186, 118);
+            this.account.Location = new System.Drawing.Point(177, 80);
             this.account.Margin = new System.Windows.Forms.Padding(4);
             this.account.Name = "account";
             this.account.Size = new System.Drawing.Size(239, 25);
@@ -87,7 +87,7 @@ namespace 数据库测试
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(186, 166);
+            this.textBox1.Location = new System.Drawing.Point(177, 128);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(239, 25);
@@ -97,7 +97,7 @@ namespace 数据库测试
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 595);
+            this.ClientSize = new System.Drawing.Size(541, 295);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.account);
             this.Controls.Add(this.label2);

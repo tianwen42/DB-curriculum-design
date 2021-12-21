@@ -10,10 +10,9 @@ namespace DataBase_Project
     /// </summary>
     public class PubConstant
     {
-        public enum loginStatus { Reader, Admin, Unlogin };
-        public static loginStatus identity = loginStatus.Unlogin;
         public static string currentAccount = "";
         public static string currentPasswd = "";
+        //连接对象
         public static SqlConnection currentConnection = new SqlConnection();
     }
 }
