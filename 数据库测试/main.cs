@@ -39,7 +39,7 @@ namespace 数据库测试
             SqlDataAdapter command = new SqlDataAdapter("select * from 球队", cnn);
             DataSet ds = new DataSet();
             command.Fill(ds, "ds");
-            this.teamAdmin.DataSource = ds.Tables[0];
+            this.TeamManagement.DataSource = ds.Tables[0];
 
             try
             {
@@ -55,6 +55,26 @@ namespace 数据库测试
         {
             // TODO: 这行代码将数据加载到表“competitionDataSet1.球队”中。您可以根据需要移动或删除它。
             this.球队TableAdapter.Fill(this.competitionDataSet1.球队);
+
+        }
+
+        private void bookSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numberInputOnly(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
 
         }
     }
