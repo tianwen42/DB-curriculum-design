@@ -16,6 +16,7 @@ namespace 数据库测试
         public main()
         {
             InitializeComponent();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,10 +34,10 @@ namespace 数据库测试
 
             SqlConnection cnn = new SqlConnection();//实例化一个连接
             cnn.ConnectionString = "server=localhost;database=competition;uid=sa;pwd=123456";//设置连接字符串
-            cnn.Open();//打开数据库连接
+            cnn.Open();
 
-            SqlDataAdapter da = new SqlDataAdapter();//实例化sqldataadpter
-            SqlDataAdapter command = new SqlDataAdapter("select * from 球队", cnn);
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter command = new SqlDataAdapter("select 球队名称,所属单位,主教练,负责人,联系方式 from 球队", cnn);
             DataSet ds = new DataSet();
             command.Fill(ds, "ds");
             this.TeamManagement.DataSource = ds.Tables[0];
@@ -74,6 +75,16 @@ namespace 数据库测试
         }
 
         private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
         {
 
         }

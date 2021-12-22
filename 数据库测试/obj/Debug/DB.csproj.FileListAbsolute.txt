@@ -20,3 +20,4 @@ C:\Users\Administrator\Desktop\db-design\数据库测试\obj\Debug\DB.csproj.Gen
 C:\Users\Administrator\Desktop\db-design\数据库测试\obj\Debug\DB.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\db-design\数据库测试\obj\Debug\数据库测试.exe
 C:\Users\Administrator\Desktop\db-design\数据库测试\obj\Debug\数据库测试.pdb
+C:\Users\Administrator\Desktop\DB-curriculum-design\数据库测试\obj\Debug\数据库测试.modteam.resources
