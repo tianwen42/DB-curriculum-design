@@ -88,5 +88,10 @@ namespace 数据库测试
         {
 
         }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
     }
 }
