@@ -16,6 +16,18 @@ namespace 数据库测试
         {
             InitializeComponent();
         }
+        public modteam(string inTeamname, string inBelong, string inTel, string inNum, string inCoach, string inPrincipal,string inRemark)
+        {
+            InitializeComponent();
+            //获取在main中选中的各字段信息显示在文本框中
+            Teamname.Text = inTeamname;
+            Belong.Text = inBelong;
+            Tel.Text = inTel;
+            Num.Text = inNum;
+            Coach.Text = inCoach;
+            Principal.Text = inPrincipal;
+            Remark.Text = inRemark;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -28,6 +40,21 @@ namespace 数据库测试
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void confirm_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void modteam_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -71,18 +71,12 @@ namespace 数据库测试
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //// 从指定数据库中查找所有表名
-            //string sqlTableName = "Select * From Information_Schema.Tables";
-            //StringBuilder tableNames = new StringBuilder();
-            //using (SqlDataReader dr = SqlHelper.ExecuteReaderByText(sqlTableName, null))
-            //{
-            //    while (dr.Read())
-            //    {
-            //        // 表名
-            //        tableNames.Append(dr["Table_Name"] + ",");
-            //    }
-            //}
-            //MessageBox.Show("数据库中所有表名：" + tableNames.ToString(), "小赖温馨提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+           
+        }
+
+        private void account_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

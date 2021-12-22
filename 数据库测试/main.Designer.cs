@@ -33,9 +33,9 @@ namespace 数据库测试
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.Plan = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.editReader = new System.Windows.Forms.Button();
+            this.editTeam = new System.Windows.Forms.Button();
             this.deleteReader = new System.Windows.Forms.Button();
-            this.addReader = new System.Windows.Forms.Button();
+            this.addTeam = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.TeamManagement = new System.Windows.Forms.DataGridView();
             this.teamCondition = new System.Windows.Forms.GroupBox();
@@ -45,34 +45,39 @@ namespace 数据库测试
             this.PlayerManagement = new System.Windows.Forms.DataGridView();
             this.bookCondition = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Playername = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.RefereeManagemant = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.RefereeLevel = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.Refereename = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.Ranking = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.球队TableAdapter = new 数据库测试.competitionDataSetTableAdapters.球队TableAdapter();
             this.competitionDataSet1 = new 数据库测试.competitionDataSet();
             this.球队BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.RefereeManagemant = new System.Windows.Forms.DataGridView();
+            this.refresh = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.NumTeam = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Position = new System.Windows.Forms.TextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Competion = new System.Windows.Forms.ComboBox();
             this.Plan.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -82,17 +87,18 @@ namespace 数据库测试
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PlayerManagement)).BeginInit();
             this.bookCondition.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RefereeManagemant)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ranking)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.competitionDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.球队BindingSource)).BeginInit();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.RefereeManagemant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Plan
@@ -102,18 +108,18 @@ namespace 数据库测试
             this.Plan.Controls.Add(this.tabPage5);
             this.Plan.Controls.Add(this.tabPage3);
             this.Plan.Controls.Add(this.tabPage4);
-            this.Plan.Location = new System.Drawing.Point(-1, -3);
+            this.Plan.Location = new System.Drawing.Point(-1, -2);
             this.Plan.Name = "Plan";
             this.Plan.SelectedIndex = 0;
-            this.Plan.Size = new System.Drawing.Size(932, 594);
+            this.Plan.Size = new System.Drawing.Size(946, 593);
             this.Plan.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.editReader);
+            this.tabPage1.Controls.Add(this.editTeam);
             this.tabPage1.Controls.Add(this.deleteReader);
-            this.tabPage1.Controls.Add(this.addReader);
+            this.tabPage1.Controls.Add(this.addTeam);
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.teamCondition);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
@@ -124,15 +130,15 @@ namespace 数据库测试
             this.tabPage1.Text = "球队管理";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // editReader
+            // editTeam
             // 
-            this.editReader.Location = new System.Drawing.Point(808, 476);
-            this.editReader.Margin = new System.Windows.Forms.Padding(4);
-            this.editReader.Name = "editReader";
-            this.editReader.Size = new System.Drawing.Size(100, 29);
-            this.editReader.TabIndex = 7;
-            this.editReader.Text = "编辑";
-            this.editReader.UseVisualStyleBackColor = true;
+            this.editTeam.Location = new System.Drawing.Point(808, 476);
+            this.editTeam.Margin = new System.Windows.Forms.Padding(4);
+            this.editTeam.Name = "editTeam";
+            this.editTeam.Size = new System.Drawing.Size(100, 29);
+            this.editTeam.TabIndex = 7;
+            this.editTeam.Text = "编辑";
+            this.editTeam.UseVisualStyleBackColor = true;
             // 
             // deleteReader
             // 
@@ -144,15 +150,16 @@ namespace 数据库测试
             this.deleteReader.Text = "删除";
             this.deleteReader.UseVisualStyleBackColor = true;
             // 
-            // addReader
+            // addTeam
             // 
-            this.addReader.Location = new System.Drawing.Point(74, 476);
-            this.addReader.Margin = new System.Windows.Forms.Padding(4);
-            this.addReader.Name = "addReader";
-            this.addReader.Size = new System.Drawing.Size(100, 29);
-            this.addReader.TabIndex = 5;
-            this.addReader.Text = "新增";
-            this.addReader.UseVisualStyleBackColor = true;
+            this.addTeam.Location = new System.Drawing.Point(74, 476);
+            this.addTeam.Margin = new System.Windows.Forms.Padding(4);
+            this.addTeam.Name = "addTeam";
+            this.addTeam.Size = new System.Drawing.Size(100, 29);
+            this.addTeam.TabIndex = 5;
+            this.addTeam.Text = "新增";
+            this.addTeam.UseVisualStyleBackColor = true;
+            this.addTeam.Click += new System.EventHandler(this.addReader_Click);
             // 
             // groupBox2
             // 
@@ -212,7 +219,7 @@ namespace 数据库测试
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(924, 565);
+            this.tabPage2.Size = new System.Drawing.Size(938, 564);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "球员管理";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -231,7 +238,7 @@ namespace 数据库测试
             // 
             // PlayerManagement
             // 
-            this.PlayerManagement.BackgroundColor = System.Drawing.Color.Maroon;
+            this.PlayerManagement.BackgroundColor = System.Drawing.Color.White;
             this.PlayerManagement.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PlayerManagement.Location = new System.Drawing.Point(6, 25);
             this.PlayerManagement.Name = "PlayerManagement";
@@ -242,8 +249,13 @@ namespace 数据库测试
             // 
             // bookCondition
             // 
+            this.bookCondition.Controls.Add(this.button4);
+            this.bookCondition.Controls.Add(this.Position);
+            this.bookCondition.Controls.Add(this.label4);
+            this.bookCondition.Controls.Add(this.NumTeam);
+            this.bookCondition.Controls.Add(this.label3);
             this.bookCondition.Controls.Add(this.button1);
-            this.bookCondition.Controls.Add(this.textBox6);
+            this.bookCondition.Controls.Add(this.Playername);
             this.bookCondition.Controls.Add(this.label10);
             this.bookCondition.Location = new System.Drawing.Point(4, 7);
             this.bookCondition.Margin = new System.Windows.Forms.Padding(4);
@@ -256,21 +268,23 @@ namespace 数据库测试
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(787, 36);
+            this.button1.Location = new System.Drawing.Point(748, 55);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 29);
+            this.button1.Size = new System.Drawing.Size(134, 29);
             this.button1.TabIndex = 16;
             this.button1.Text = "查询";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox6
+            // Playername
             // 
-            this.textBox6.Location = new System.Drawing.Point(65, 32);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(132, 25);
-            this.textBox6.TabIndex = 1;
+            this.Playername.Location = new System.Drawing.Point(65, 32);
+            this.Playername.Margin = new System.Windows.Forms.Padding(4);
+            this.Playername.Name = "Playername";
+            this.Playername.Size = new System.Drawing.Size(111, 25);
+            this.Playername.TabIndex = 1;
+            this.Playername.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
             // label10
             // 
@@ -283,18 +297,123 @@ namespace 数据库测试
             this.label10.Text = "姓名";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.groupBox5);
+            this.tabPage5.Controls.Add(this.groupBox4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 25);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(938, 564);
+            this.tabPage5.TabIndex = 4;
+            this.tabPage5.Text = "裁判管理";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.RefereeManagemant);
+            this.groupBox5.Location = new System.Drawing.Point(7, 107);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox5.Size = new System.Drawing.Size(913, 399);
+            this.groupBox5.TabIndex = 42;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "查询结果";
+            // 
+            // RefereeManagemant
+            // 
+            this.RefereeManagemant.BackgroundColor = System.Drawing.Color.White;
+            this.RefereeManagemant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.RefereeManagemant.Location = new System.Drawing.Point(6, 25);
+            this.RefereeManagemant.Name = "RefereeManagemant";
+            this.RefereeManagemant.RowHeadersWidth = 51;
+            this.RefereeManagemant.RowTemplate.Height = 27;
+            this.RefereeManagemant.Size = new System.Drawing.Size(900, 367);
+            this.RefereeManagemant.TabIndex = 40;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.refresh);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.RefereeLevel);
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.Refereename);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Location = new System.Drawing.Point(4, 7);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(913, 92);
+            this.groupBox4.TabIndex = 40;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "查询条件";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(343, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 15);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "级别：";
+            // 
+            // RefereeLevel
+            // 
+            this.RefereeLevel.FormattingEnabled = true;
+            this.RefereeLevel.Items.AddRange(new object[] {
+            "特级",
+            "一级",
+            "二级"});
+            this.RefereeLevel.Location = new System.Drawing.Point(401, 32);
+            this.RefereeLevel.Name = "RefereeLevel";
+            this.RefereeLevel.Size = new System.Drawing.Size(121, 23);
+            this.RefereeLevel.TabIndex = 17;
+            this.RefereeLevel.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(786, 28);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 29);
+            this.button3.TabIndex = 16;
+            this.button3.Text = "查询";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // Refereename
+            // 
+            this.Refereename.Location = new System.Drawing.Point(65, 32);
+            this.Refereename.Margin = new System.Windows.Forms.Padding(4);
+            this.Refereename.Name = "Refereename";
+            this.Refereename.Size = new System.Drawing.Size(136, 25);
+            this.Refereename.TabIndex = 1;
+            this.Refereename.TextChanged += new System.EventHandler(this.Refereename_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(20, 36);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "姓名";
+            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.monthCalendar1);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.label5);
             this.tabPage3.Controls.Add(this.dataGridView2);
-            this.tabPage3.Controls.Add(this.monthCalendar1);
+            this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Font = new System.Drawing.Font("黑体", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(924, 565);
+            this.tabPage3.Size = new System.Drawing.Size(938, 564);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "比赛安排";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -303,7 +422,7 @@ namespace 数据库测试
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("黑体", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(409, 97);
+            this.label7.Location = new System.Drawing.Point(323, 93);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 28);
             this.label7.TabIndex = 5;
@@ -314,7 +433,7 @@ namespace 数据库测试
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("黑体", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(109, 97);
+            this.label6.Location = new System.Drawing.Point(23, 93);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 28);
             this.label6.TabIndex = 4;
@@ -324,7 +443,7 @@ namespace 数据库测试
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("黑体", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(252, 76);
+            this.label5.Location = new System.Drawing.Point(166, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 70);
             this.label5.TabIndex = 3;
@@ -338,14 +457,8 @@ namespace 数据库测试
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 27;
-            this.dataGridView2.Size = new System.Drawing.Size(909, 278);
+            this.dataGridView2.Size = new System.Drawing.Size(909, 282);
             this.dataGridView2.TabIndex = 2;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.Location = new System.Drawing.Point(653, 9);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 1;
             // 
             // tabPage4
             // 
@@ -354,7 +467,7 @@ namespace 数据库测试
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(924, 565);
+            this.tabPage4.Size = new System.Drawing.Size(938, 564);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "积分排名";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -371,13 +484,9 @@ namespace 数据库测试
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox2);
+            this.groupBox1.Controls.Add(this.Competion);
+            this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Location = new System.Drawing.Point(7, 7);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
@@ -386,19 +495,6 @@ namespace 数据库测试
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询条件";
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "男",
-            "女"});
-            this.comboBox2.Location = new System.Drawing.Point(277, 27);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(132, 23);
-            this.comboBox2.TabIndex = 23;
             // 
             // button2
             // 
@@ -409,64 +505,6 @@ namespace 数据库测试
             this.button2.TabIndex = 16;
             this.button2.Text = "查询";
             this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(232, 30);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 15);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "性别";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(516, 27);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 25);
-            this.textBox1.TabIndex = 3;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(467, 30);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "年龄";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(57, 26);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(132, 25);
-            this.textBox2.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 30);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(37, 15);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "姓名";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.groupBox5);
-            this.tabPage5.Controls.Add(this.groupBox4);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(924, 565);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "裁判管理";
-            this.tabPage5.UseVisualStyleBackColor = true;
             // 
             // 球队TableAdapter
             // 
@@ -482,77 +520,104 @@ namespace 数据库测试
             this.球队BindingSource.DataMember = "球队";
             this.球队BindingSource.DataSource = this.competitionDataSet1;
             // 
-            // groupBox4
+            // refresh
             // 
-            this.groupBox4.Controls.Add(this.button3);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.label1);
-            this.groupBox4.Location = new System.Drawing.Point(4, 7);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(913, 92);
-            this.groupBox4.TabIndex = 40;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "查询条件";
+            this.refresh.Location = new System.Drawing.Point(644, 28);
+            this.refresh.Name = "refresh";
+            this.refresh.Size = new System.Drawing.Size(126, 29);
+            this.refresh.TabIndex = 19;
+            this.refresh.Text = "清除查询条件";
+            this.refresh.UseVisualStyleBackColor = true;
+            this.refresh.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // label3
             // 
-            this.button3.Location = new System.Drawing.Point(787, 36);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 29);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "查询";
-            this.button3.UseVisualStyleBackColor = true;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(211, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 15);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "队伍";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // textBox3
+            // NumTeam
             // 
-            this.textBox3.Location = new System.Drawing.Point(65, 32);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(132, 25);
-            this.textBox3.TabIndex = 1;
+            this.NumTeam.Location = new System.Drawing.Point(254, 32);
+            this.NumTeam.Name = "NumTeam";
+            this.NumTeam.Size = new System.Drawing.Size(111, 25);
+            this.NumTeam.TabIndex = 18;
+            this.NumTeam.TextChanged += new System.EventHandler(this.NumTeam_TextChanged);
             // 
-            // label1
+            // label4
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 15);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "姓名";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(403, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 15);
+            this.label4.TabIndex = 19;
+            this.label4.Text = "位置";
             // 
-            // groupBox5
+            // Position
             // 
-            this.groupBox5.Controls.Add(this.RefereeManagemant);
-            this.groupBox5.Location = new System.Drawing.Point(7, 107);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(913, 399);
-            this.groupBox5.TabIndex = 42;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "查询结果";
+            this.Position.Location = new System.Drawing.Point(446, 33);
+            this.Position.Name = "Position";
+            this.Position.Size = new System.Drawing.Size(100, 25);
+            this.Position.TabIndex = 20;
             // 
-            // RefereeManagemant
+            // button4
             // 
-            this.RefereeManagemant.BackgroundColor = System.Drawing.Color.Maroon;
-            this.RefereeManagemant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.RefereeManagemant.Location = new System.Drawing.Point(6, 25);
-            this.RefereeManagemant.Name = "RefereeManagemant";
-            this.RefereeManagemant.RowHeadersWidth = 51;
-            this.RefereeManagemant.RowTemplate.Height = 27;
-            this.RefereeManagemant.Size = new System.Drawing.Size(900, 367);
-            this.RefereeManagemant.TabIndex = 40;
+            this.button4.Location = new System.Drawing.Point(748, 19);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(134, 29);
+            this.button4.TabIndex = 21;
+            this.button4.Text = "清除查询条件";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.Location = new System.Drawing.Point(447, 0);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(741, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(170, 207);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(30, 37);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(67, 15);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "选择赛事";
+            // 
+            // Competion
+            // 
+            this.Competion.FormattingEnabled = true;
+            this.Competion.Items.AddRange(new object[] {
+            "虹桥杯",
+            "金标杯",
+            "晓庄杯"});
+            this.Competion.Location = new System.Drawing.Point(103, 34);
+            this.Competion.Name = "Competion";
+            this.Competion.Size = new System.Drawing.Size(121, 23);
+            this.Competion.TabIndex = 18;
             // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 545);
+            this.ClientSize = new System.Drawing.Size(926, 540);
             this.Controls.Add(this.Plan);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -569,6 +634,11 @@ namespace 数据库测试
             ((System.ComponentModel.ISupportInitialize)(this.PlayerManagement)).EndInit();
             this.bookCondition.ResumeLayout(false);
             this.bookCondition.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.RefereeManagemant)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -576,13 +646,9 @@ namespace 数据库测试
             ((System.ComponentModel.ISupportInitialize)(this.Ranking)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.competitionDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.球队BindingSource)).EndInit();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.RefereeManagemant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -596,9 +662,9 @@ namespace 数据库测试
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.GroupBox teamCondition;
         private System.Windows.Forms.Button teamSearch;
-        private System.Windows.Forms.Button editReader;
+        private System.Windows.Forms.Button editTeam;
         private System.Windows.Forms.Button deleteReader;
-        private System.Windows.Forms.Button addReader;
+        private System.Windows.Forms.Button addTeam;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView TeamManagement;
         private competitionDataSetTableAdapters.球队TableAdapter 球队TableAdapter;
@@ -606,17 +672,10 @@ namespace 数据库测试
         private System.Windows.Forms.BindingSource 球队BindingSource;
         private System.Windows.Forms.GroupBox bookCondition;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox Playername;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView Ranking;
         private System.Windows.Forms.DataGridView PlayerManagement;
         private System.Windows.Forms.Label label5;
@@ -629,7 +688,19 @@ namespace 数据库测试
         private System.Windows.Forms.DataGridView RefereeManagemant;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox Refereename;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox RefereeLevel;
+        private System.Windows.Forms.Button refresh;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox Position;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox NumTeam;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.ComboBox Competion;
+        private System.Windows.Forms.Label label8;
     }
 }

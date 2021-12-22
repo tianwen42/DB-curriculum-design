@@ -81,6 +81,7 @@ namespace 数据库测试
             this.account.Name = "account";
             this.account.Size = new System.Drawing.Size(239, 25);
             this.account.TabIndex = 4;
+            this.account.TextChanged += new System.EventHandler(this.account_TextChanged);
             // 
             // textBox1
             // 
