@@ -214,18 +214,21 @@ namespace 数据库测试
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string Sql = String.Format("SELECT [积分排名汇总表].[比赛序号],[积分排名汇总表].[球队名称],[积分排名汇总表].[总分] FROM [积分排名汇总表] WHERE [积分排名汇总表].[赛事名称] = '{0}' GROUP BY [积分排名汇总表].[球队名称],[积分排名汇总表].[总分],[积分排名汇总表].[比赛序号] ORDER BY SUM([积分排名汇总表].[总分]) DESC", Competion.Text);
-            //string inRefereename = Refereename.Text;
-            //MessageBox.Show(inRefereename);
-            SqlConnection cnn = new SqlConnection();//实例化一个连接
-            cnn.ConnectionString = "server=localhost;database=competition;uid=sa;pwd=123456";//设置连接字符串
-            cnn.Open();
+            if (Competion.Text!="") {
+                string Sql = String.Format("SELECT [积分排名汇总表].[球队名称],SUM([积分排名汇总表].[总分]) as 总分 FROM [积分排名汇总表] WHERE [积分排名汇总表].[赛事名称] = '{0}' GROUP BY [积分排名汇总表].[球队名称] ORDER BY SUM([积分排名汇总表].[总分]) DESC", Competion.Text);
+                //string inRefereename = Refereename.Text;
+                //MessageBox.Show(inRefereename);
+                SqlConnection cnn = new SqlConnection();//实例化一个连接
+                cnn.ConnectionString = "server=localhost;database=competition;uid=sa;pwd=123456";//设置连接字符串
+                cnn.Open();
 
-            SqlDataAdapter da = new SqlDataAdapter();
-            SqlDataAdapter command = new SqlDataAdapter(Sql, cnn);
-            DataSet ds = new DataSet();
-            command.Fill(ds, "ds");
-            this.Ranking.DataSource = ds.Tables[0];
+                SqlDataAdapter da = new SqlDataAdapter();
+                SqlDataAdapter command = new SqlDataAdapter(Sql, cnn);
+                DataSet ds = new DataSet();
+                command.Fill(ds, "ds");
+                this.Ranking.DataSource = ds.Tables[0];
+            } else { MessageBox.Show("请选择一个赛事！"); }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -259,6 +262,7 @@ namespace 数据库测试
             {
                 int index = TeamManagement.CurrentRow.Index;//获取当前选中行
                 string account = TeamManagement.Rows[index].Cells[6].Value.ToString().Trim();
+                MessageBox.Show(account);
                 string deleteTeamSql = String.Format(@"exec sp_droplogin '{0}' 
                                     exec sp_dropuser '{1}'
                                     delete from 球队 where account='{2}'", account, account, account);
