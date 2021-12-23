@@ -150,12 +150,12 @@ namespace 数据库测试
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(71, 52);
+            this.label1.Location = new System.Drawing.Point(25, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 15);
+            this.label1.Size = new System.Drawing.Size(98, 15);
             this.label1.TabIndex = 9;
-            this.label1.Text = "球队名";
+            this.label1.Text = "球队名(必填)";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // confirm

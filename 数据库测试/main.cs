@@ -91,12 +91,20 @@ namespace 数据库测试
 
         }
 
-        private void addReader_Click(object sender, EventArgs e)
+        private void addteam_Click(object sender, EventArgs e)
         {
             //验证成功进入系统
             modteam modteamForm = new modteam();
             modteamForm.ShowDialog();
             modteamForm.Dispose();
+            SqlConnection cnn = new SqlConnection();//实例化一个连接
+            cnn.ConnectionString = "server=localhost;database=competition;uid=sa;pwd=123456";//设置连接字符串
+            cnn.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter command = new SqlDataAdapter("seclect * from 球队", cnn);
+            DataSet ds = new DataSet();
+            command.Fill(ds, "ds");
+            TeamManagement.DataSource = ds.Tables[0];
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -192,6 +200,27 @@ namespace 数据库测试
             Position.Text = "";
 
             this.PlayerManagement.DataSource = null;
+        }
+
+        private void groupBox4_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string Sql = String.Format("SELECT [积分排名汇总表].[比赛序号],[积分排名汇总表].[球队名称],[积分排名汇总表].[总分] FROM [积分排名汇总表] WHERE [积分排名汇总表].[赛事名称] = '{0}' GROUP BY [积分排名汇总表].[球队名称],[积分排名汇总表].[总分],[积分排名汇总表].[比赛序号] ORDER BY SUM([积分排名汇总表].[总分]) DESC", Competion.Text);
+            //string inRefereename = Refereename.Text;
+            //MessageBox.Show(inRefereename);
+            SqlConnection cnn = new SqlConnection();//实例化一个连接
+            cnn.ConnectionString = "server=localhost;database=competition;uid=sa;pwd=123456";//设置连接字符串
+            cnn.Open();
+
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter command = new SqlDataAdapter(Sql, cnn);
+            DataSet ds = new DataSet();
+            command.Fill(ds, "ds");
+            this.Ranking.DataSource = ds.Tables[0];
         }
     }
 }

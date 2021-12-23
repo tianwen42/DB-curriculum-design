@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
+using static DataBase_Project.PubConstant;
 namespace 数据库测试
 {
     public partial class modteam : Form
@@ -46,7 +47,25 @@ namespace 数据库测试
 
         private void confirm_Click(object sender, EventArgs e)
         {
+            String AddTeamSql = string.Empty;
+            AddTeamSql = "INSERT INTO 球队(球队名称, 所属单位, 主教练, 球队人数, 负责人, 联系方式) VALUES('";
+            if (string.IsNullOrEmpty(this.Teamname.Text.ToString()))
+            {
+                MessageBox.Show("球队名不能为空");
+                return;
+            }
+            else {
+                AddTeamSql += "'" + this.Teamname.Text.ToString() + "',";
+            }
+            AddTeamSql += "'" + this.Teamname.Text.ToString() + "',";
+            AddTeamSql += "'" + this.Belong.Text.ToString() + "',";
+            AddTeamSql += "'" + this.Coach.Text.ToString() + "',";
+            AddTeamSql += "'" + this.Num.Text.ToString() + "',";
+            AddTeamSql += "'" + this.Principal.Text.ToString() + "',";
+            AddTeamSql += "'" + this.Tel.Text.ToString() + "'";
+            AddTeamSql += ")";
 
+            
         }
 
         private void modteam_Load(object sender, EventArgs e)
