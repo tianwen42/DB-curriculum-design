@@ -42,6 +42,7 @@ namespace 数据库测试
                 DataSet ds = new DataSet();
                 command.Fill(ds, "ds");
                 this.TeamManagement.DataSource = ds.Tables[0];
+                cnn.Close();
             }
             catch
             {
@@ -93,18 +94,22 @@ namespace 数据库测试
 
         private void addteam_Click(object sender, EventArgs e)
         {
-            //验证成功进入系统
+
+            //添加
             modteam modteamForm = new modteam();
+            modteamForm.Modifytype = "添加";
+            modteamForm.Text = "添加队伍";
             modteamForm.ShowDialog();
             modteamForm.Dispose();
             SqlConnection cnn = new SqlConnection();//实例化一个连接
             cnn.ConnectionString = "server=localhost;database=competition;uid=sa;pwd=123456";//设置连接字符串
             cnn.Open();
             SqlDataAdapter da = new SqlDataAdapter();
-            SqlDataAdapter command = new SqlDataAdapter("seclect * from 球队", cnn);
+            SqlDataAdapter command = new SqlDataAdapter("select * from 球队", cnn);
             DataSet ds = new DataSet();
             command.Fill(ds, "ds");
-            TeamManagement.DataSource = ds.Tables[0];
+            this.TeamManagement.DataSource = ds.Tables[0];
+            cnn.Close();
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
@@ -221,6 +226,86 @@ namespace 数据库测试
             DataSet ds = new DataSet();
             command.Fill(ds, "ds");
             this.Ranking.DataSource = ds.Tables[0];
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void editTeam_Click(object sender, EventArgs e)
+        {
+            //验证成功进入系统
+            modteam modteamForm = new modteam();
+            modteamForm.Modifytype = "修改";
+            modteamForm.Text = "修改队伍信息";
+            modteamForm.ShowDialog();
+            modteamForm.Dispose();
+            SqlConnection cnn = new SqlConnection();//实例化一个连接
+            cnn.ConnectionString = "server=localhost;database=competition;uid=sa;pwd=123456";//设置连接字符串
+            cnn.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter command = new SqlDataAdapter("select * from 球队", cnn);
+            DataSet ds = new DataSet();
+            command.Fill(ds, "ds");
+            this.TeamManagement.DataSource = ds.Tables[0];
+            cnn.Close();
+            modteamForm.Close();
+        }
+
+        private void deleteTeam_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int index = TeamManagement.CurrentRow.Index;//获取当前选中行
+                string account = TeamManagement.Rows[index].Cells[6].Value.ToString().Trim();
+                string deleteTeamSql = String.Format(@"exec sp_droplogin '{0}' 
+                                    exec sp_dropuser '{1}'
+                                    delete from 球队 where account='{2}'", account, account, account);
+                if (DialogResult.Yes == MessageBox.Show("确定要删除该记录", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1))
+                {
+                    //SQL删除语句字符串
+                    if (1> 0) //向源数据库传递SQL命令字符串，得到删除结果
+                    {
+                        MessageBox.Show("删除成功");
+                        TeamManagement.Rows.RemoveAt(index);
+                    }
+                    else
+                    {
+                        MessageBox.Show("删除失败");
+                    }
+                }
+            }
+            catch (NullReferenceException exception)
+            {
+                MessageBox.Show("请先选中一行！");
+                return;
+            }
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            string date = monthCalendar1.SelectionStart.ToString("yyyy-MM-dd");
+            string Datesql = String.Format(@"select * from 比赛安排表 WHERE [比赛日期]='{0}'",date );
+            SqlConnection cnn = new SqlConnection();//实例化一个连接
+            cnn.ConnectionString = "server=localhost;database=competition;uid=sa;pwd=123456";//设置连接字符串
+            cnn.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlDataAdapter command = new SqlDataAdapter(Datesql, cnn);
+            DataSet ds = new DataSet();
+            command.Fill(ds, "ds");
+            this.dataGridView2.DataSource = ds.Tables[0];
+            cnn.Close();
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = dataGridView2.CurrentRow.Index;//获取当前选中行
+            //string account = TeamManagement.Rows[index].Cells[6].Value.ToString().Trim();
+            string team1=dataGridView2.Rows[index].Cells[5].Value.ToString();
+            string team2 = dataGridView2.Rows[index].Cells[6].Value.ToString();
+            label6.Text = team1;
+            label7.Text = team2;
         }
     }
 }

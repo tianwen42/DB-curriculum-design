@@ -30,6 +30,9 @@ namespace 数据库测试
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main));
             this.Plan = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -78,6 +81,12 @@ namespace 数据库测试
             this.球队TableAdapter = new 数据库测试.competitionDataSetTableAdapters.球队TableAdapter();
             this.competitionDataSet1 = new 数据库测试.competitionDataSet();
             this.球队BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
             this.Plan.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -111,7 +120,7 @@ namespace 数据库测试
             this.Plan.Location = new System.Drawing.Point(-1, -2);
             this.Plan.Name = "Plan";
             this.Plan.SelectedIndex = 0;
-            this.Plan.Size = new System.Drawing.Size(946, 593);
+            this.Plan.Size = new System.Drawing.Size(1151, 566);
             this.Plan.TabIndex = 0;
             // 
             // tabPage1
@@ -125,30 +134,32 @@ namespace 数据库测试
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(938, 564);
+            this.tabPage1.Size = new System.Drawing.Size(1143, 537);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "球队管理";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // editTeam
             // 
-            this.editTeam.Location = new System.Drawing.Point(808, 476);
+            this.editTeam.Location = new System.Drawing.Point(1017, 476);
             this.editTeam.Margin = new System.Windows.Forms.Padding(4);
             this.editTeam.Name = "editTeam";
             this.editTeam.Size = new System.Drawing.Size(100, 29);
             this.editTeam.TabIndex = 7;
             this.editTeam.Text = "编辑";
             this.editTeam.UseVisualStyleBackColor = true;
+            this.editTeam.Click += new System.EventHandler(this.editTeam_Click);
             // 
             // deleteReader
             // 
-            this.deleteReader.Location = new System.Drawing.Point(391, 476);
+            this.deleteReader.Location = new System.Drawing.Point(539, 476);
             this.deleteReader.Margin = new System.Windows.Forms.Padding(4);
             this.deleteReader.Name = "deleteReader";
             this.deleteReader.Size = new System.Drawing.Size(100, 29);
             this.deleteReader.TabIndex = 6;
             this.deleteReader.Text = "删除";
             this.deleteReader.UseVisualStyleBackColor = true;
+            this.deleteReader.Click += new System.EventHandler(this.deleteTeam_Click);
             // 
             // addTeam
             // 
@@ -168,7 +179,7 @@ namespace 数据库测试
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(907, 370);
+            this.groupBox2.Size = new System.Drawing.Size(1114, 370);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "查询结果";
@@ -183,7 +194,7 @@ namespace 数据库测试
             this.TeamManagement.Name = "TeamManagement";
             this.TeamManagement.RowHeadersWidth = 51;
             this.TeamManagement.RowTemplate.Height = 27;
-            this.TeamManagement.Size = new System.Drawing.Size(891, 332);
+            this.TeamManagement.Size = new System.Drawing.Size(1100, 332);
             this.TeamManagement.TabIndex = 0;
             this.TeamManagement.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -195,7 +206,7 @@ namespace 数据库测试
             this.teamCondition.Margin = new System.Windows.Forms.Padding(4);
             this.teamCondition.Name = "teamCondition";
             this.teamCondition.Padding = new System.Windows.Forms.Padding(4);
-            this.teamCondition.Size = new System.Drawing.Size(903, 75);
+            this.teamCondition.Size = new System.Drawing.Size(1111, 75);
             this.teamCondition.TabIndex = 1;
             this.teamCondition.TabStop = false;
             this.teamCondition.Text = "球队查询";
@@ -203,7 +214,7 @@ namespace 数据库测试
             // teamSearch
             // 
             this.teamSearch.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.teamSearch.Location = new System.Drawing.Point(363, 26);
+            this.teamSearch.Location = new System.Drawing.Point(497, 26);
             this.teamSearch.Margin = new System.Windows.Forms.Padding(4);
             this.teamSearch.Name = "teamSearch";
             this.teamSearch.Size = new System.Drawing.Size(158, 31);
@@ -214,12 +225,15 @@ namespace 数据库测试
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button5);
+            this.tabPage2.Controls.Add(this.button6);
+            this.tabPage2.Controls.Add(this.button7);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.bookCondition);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(938, 564);
+            this.tabPage2.Size = new System.Drawing.Size(1143, 537);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "球员管理";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -231,7 +245,7 @@ namespace 数据库测试
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox3.Size = new System.Drawing.Size(913, 399);
+            this.groupBox3.Size = new System.Drawing.Size(1120, 355);
             this.groupBox3.TabIndex = 41;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "查询结果";
@@ -244,7 +258,7 @@ namespace 数据库测试
             this.PlayerManagement.Name = "PlayerManagement";
             this.PlayerManagement.RowHeadersWidth = 51;
             this.PlayerManagement.RowTemplate.Height = 27;
-            this.PlayerManagement.Size = new System.Drawing.Size(900, 367);
+            this.PlayerManagement.Size = new System.Drawing.Size(1106, 318);
             this.PlayerManagement.TabIndex = 40;
             // 
             // bookCondition
@@ -261,14 +275,14 @@ namespace 数据库测试
             this.bookCondition.Margin = new System.Windows.Forms.Padding(4);
             this.bookCondition.Name = "bookCondition";
             this.bookCondition.Padding = new System.Windows.Forms.Padding(4);
-            this.bookCondition.Size = new System.Drawing.Size(913, 92);
+            this.bookCondition.Size = new System.Drawing.Size(1120, 91);
             this.bookCondition.TabIndex = 39;
             this.bookCondition.TabStop = false;
             this.bookCondition.Text = "查询条件";
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(748, 19);
+            this.button4.Location = new System.Drawing.Point(978, 18);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(134, 29);
             this.button4.TabIndex = 21;
@@ -278,7 +292,7 @@ namespace 数据库测试
             // 
             // Position
             // 
-            this.Position.Location = new System.Drawing.Point(446, 33);
+            this.Position.Location = new System.Drawing.Point(490, 33);
             this.Position.Name = "Position";
             this.Position.Size = new System.Drawing.Size(100, 25);
             this.Position.TabIndex = 20;
@@ -286,7 +300,7 @@ namespace 数据库测试
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(403, 36);
+            this.label4.Location = new System.Drawing.Point(447, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 15);
             this.label4.TabIndex = 19;
@@ -312,7 +326,7 @@ namespace 数据库测试
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(748, 55);
+            this.button1.Location = new System.Drawing.Point(978, 54);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(134, 29);
@@ -343,12 +357,15 @@ namespace 数据库测试
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.button8);
+            this.tabPage5.Controls.Add(this.button9);
+            this.tabPage5.Controls.Add(this.button10);
             this.tabPage5.Controls.Add(this.groupBox5);
             this.tabPage5.Controls.Add(this.groupBox4);
             this.tabPage5.Location = new System.Drawing.Point(4, 25);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(938, 564);
+            this.tabPage5.Size = new System.Drawing.Size(1143, 537);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "裁判管理";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -360,7 +377,7 @@ namespace 数据库测试
             this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox5.Size = new System.Drawing.Size(913, 399);
+            this.groupBox5.Size = new System.Drawing.Size(1117, 345);
             this.groupBox5.TabIndex = 42;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "查询结果";
@@ -373,7 +390,7 @@ namespace 数据库测试
             this.RefereeManagemant.Name = "RefereeManagemant";
             this.RefereeManagemant.RowHeadersWidth = 51;
             this.RefereeManagemant.RowTemplate.Height = 27;
-            this.RefereeManagemant.Size = new System.Drawing.Size(900, 367);
+            this.RefereeManagemant.Size = new System.Drawing.Size(1104, 313);
             this.RefereeManagemant.TabIndex = 40;
             // 
             // groupBox4
@@ -388,7 +405,7 @@ namespace 数据库测试
             this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox4.Size = new System.Drawing.Size(913, 92);
+            this.groupBox4.Size = new System.Drawing.Size(1120, 92);
             this.groupBox4.TabIndex = 40;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "查询条件";
@@ -396,7 +413,7 @@ namespace 数据库测试
             // 
             // refresh
             // 
-            this.refresh.Location = new System.Drawing.Point(644, 28);
+            this.refresh.Location = new System.Drawing.Point(858, 36);
             this.refresh.Name = "refresh";
             this.refresh.Size = new System.Drawing.Size(126, 29);
             this.refresh.TabIndex = 19;
@@ -428,7 +445,7 @@ namespace 数据库测试
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(786, 28);
+            this.button3.Location = new System.Drawing.Point(1000, 36);
             this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 29);
@@ -458,17 +475,17 @@ namespace 数据库测试
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.monthCalendar1);
             this.tabPage3.Controls.Add(this.label6);
             this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.monthCalendar1);
             this.tabPage3.Controls.Add(this.dataGridView2);
             this.tabPage3.Controls.Add(this.pictureBox1);
             this.tabPage3.Font = new System.Drawing.Font("黑体", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(938, 564);
+            this.tabPage3.Size = new System.Drawing.Size(1143, 537);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "比赛安排";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -477,7 +494,7 @@ namespace 数据库测试
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("黑体", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(323, 93);
+            this.label7.Location = new System.Drawing.Point(483, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 28);
             this.label7.TabIndex = 5;
@@ -486,15 +503,16 @@ namespace 数据库测试
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(447, 0);
+            this.monthCalendar1.Location = new System.Drawing.Point(646, 0);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 1;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("黑体", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(23, 93);
+            this.label6.Location = new System.Drawing.Point(37, 88);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 28);
             this.label6.TabIndex = 4;
@@ -504,7 +522,7 @@ namespace 数据库测试
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("黑体", 42F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(166, 72);
+            this.label5.Location = new System.Drawing.Point(243, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(102, 70);
             this.label5.TabIndex = 3;
@@ -513,18 +531,43 @@ namespace 数据库测试
             // 
             // dataGridView2
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(6, 228);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView2.Location = new System.Drawing.Point(9, 230);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView2.RowHeadersWidth = 20;
             this.dataGridView2.RowTemplate.Height = 27;
-            this.dataGridView2.Size = new System.Drawing.Size(909, 282);
+            this.dataGridView2.Size = new System.Drawing.Size(1116, 292);
             this.dataGridView2.TabIndex = 2;
+            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(741, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(955, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(170, 207);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -538,7 +581,7 @@ namespace 数据库测试
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(938, 564);
+            this.tabPage4.Size = new System.Drawing.Size(1143, 537);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "积分排名";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -550,7 +593,7 @@ namespace 数据库测试
             this.Ranking.Name = "Ranking";
             this.Ranking.RowHeadersWidth = 51;
             this.Ranking.RowTemplate.Height = 27;
-            this.Ranking.Size = new System.Drawing.Size(909, 415);
+            this.Ranking.Size = new System.Drawing.Size(1117, 415);
             this.Ranking.TabIndex = 41;
             // 
             // groupBox1
@@ -562,7 +605,7 @@ namespace 数据库测试
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(910, 86);
+            this.groupBox1.Size = new System.Drawing.Size(1117, 86);
             this.groupBox1.TabIndex = 40;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询条件";
@@ -590,7 +633,7 @@ namespace 数据库测试
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(795, 30);
+            this.button2.Location = new System.Drawing.Point(999, 30);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 29);
@@ -613,11 +656,71 @@ namespace 数据库测试
             this.球队BindingSource.DataMember = "球队";
             this.球队BindingSource.DataSource = this.competitionDataSet1;
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(994, 482);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(100, 29);
+            this.button5.TabIndex = 44;
+            this.button5.Text = "编辑";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(516, 482);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(100, 29);
+            this.button6.TabIndex = 43;
+            this.button6.Text = "删除";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(51, 482);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(100, 29);
+            this.button7.TabIndex = 42;
+            this.button7.Text = "新增";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(1000, 478);
+            this.button8.Margin = new System.Windows.Forms.Padding(4);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(100, 29);
+            this.button8.TabIndex = 45;
+            this.button8.Text = "编辑";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(522, 478);
+            this.button9.Margin = new System.Windows.Forms.Padding(4);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(100, 29);
+            this.button9.TabIndex = 44;
+            this.button9.Text = "删除";
+            this.button9.UseVisualStyleBackColor = true;
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(57, 478);
+            this.button10.Margin = new System.Windows.Forms.Padding(4);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(100, 29);
+            this.button10.TabIndex = 43;
+            this.button10.Text = "新增";
+            this.button10.UseVisualStyleBackColor = true;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(926, 540);
+            this.ClientSize = new System.Drawing.Size(1140, 557);
             this.Controls.Add(this.Plan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -704,5 +807,11 @@ namespace 数据库测试
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.ComboBox Competion;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button10;
     }
 }
