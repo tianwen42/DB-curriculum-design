@@ -261,23 +261,36 @@ namespace 数据库测试
             try
             {
                 int index = TeamManagement.CurrentRow.Index;//获取当前选中行
-                string account = TeamManagement.Rows[index].Cells[6].Value.ToString().Trim();
-                MessageBox.Show(account);
-                string deleteTeamSql = String.Format(@"exec sp_droplogin '{0}' 
-                                    exec sp_dropuser '{1}'
-                                    delete from 球队 where account='{2}'", account, account, account);
+                string Team = TeamManagement.Rows[index].Cells[0].Value.ToString().Trim();
+                string deleteTeamSql = String.Format(@"DELETE FROM 球队 WHERE [球队名称] = '{0}'", Team);
+
+                
                 if (DialogResult.Yes == MessageBox.Show("确定要删除该记录", "警告", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1))
                 {
-                    //SQL删除语句字符串
-                    if (1> 0) //向源数据库传递SQL命令字符串，得到删除结果
-                    {
+                    try {
+                        SqlConnection cnn = new SqlConnection();//实例化一个连接
+                        cnn.ConnectionString = "server=localhost;database=competition;uid=sa;pwd=123456";//设置连接字符串
+                        cnn.Open();
+                        SqlDataAdapter da = new SqlDataAdapter();
+                        SqlDataAdapter command = new SqlDataAdapter(deleteTeamSql, cnn);
+                        DataSet ds = new DataSet();
+                        command.Fill(ds, "ds");
+                        cnn.Close();
                         MessageBox.Show("删除成功");
                         TeamManagement.Rows.RemoveAt(index);
                     }
-                    else
-                    {
-                        MessageBox.Show("删除失败");
-                    }
+                    catch { MessageBox.Show("删除失败"); }
+                    
+                    ////SQL删除语句字符串
+                    //if (Flag > 0) //向源数据库传递SQL命令字符串，得到删除结果
+                    //{
+                    //    MessageBox.Show("删除成功");
+                    //    TeamManagement.Rows.RemoveAt(index);
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("删除失败");
+                    //}
                 }
             }
             catch (NullReferenceException exception)
