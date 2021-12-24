@@ -281,16 +281,6 @@ namespace 数据库测试
                     }
                     catch { MessageBox.Show("删除失败"); }
                     
-                    ////SQL删除语句字符串
-                    //if (Flag > 0) //向源数据库传递SQL命令字符串，得到删除结果
-                    //{
-                    //    MessageBox.Show("删除成功");
-                    //    TeamManagement.Rows.RemoveAt(index);
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("删除失败");
-                    //}
                 }
             }
             catch (NullReferenceException exception)

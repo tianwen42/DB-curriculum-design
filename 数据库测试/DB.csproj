@@ -57,7 +57,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>competitionDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DbHelperSQL.cs" />
     <Compile Include="loginDsigner.cs">
       <SubType>Form</SubType>
     </Compile>
